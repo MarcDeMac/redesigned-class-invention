@@ -1,0 +1,32 @@
+body{
+    color:rgb(87, 136, 87);
+    background-color:lightblue;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+p{
+
+    background-color:rgb(199, 147, 225);
+    border: 1px solid;
+    padding:20px;
+    margin: 10px auto;
+    width: 600px;
+    text-align: center;
+}
+a{
+    color:rgb(129, 95, 53);
+    text-decoration: none;
+}
+a:hover{
+    color:brown;
+    text-decoration: line-through;
+}
+
+.special {
+    font-size:25px;
+}
+
+.new{
+    background-color:darkkhaki;
+}
