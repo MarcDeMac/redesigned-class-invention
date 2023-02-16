@@ -1,0 +1,232 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Global styles */
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+main {
+	padding: 20px;
+    
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+   
+}
+
+.shape {
+	position: relative;
+	margin: 10px;
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 2px solid #fff;
+    
+}
+
+.shape:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #fff;
+    
+}
+
+.shape:after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #fff;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+/* Shape styles */
+.shape1 {
+	background-color: #fc5c65;
+	flex: 0 0 200px;
+	height: 200px;
+}
+
+.shape2 {
+	background-color: #fd9644;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: rotate(45deg);
+}
+
+.shape3 {
+	background-color: #fed330;
+	flex: 0 0 250px;
+	height: 250px;
+}
+
+.shape4 {
+	background-color: #26de81;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: skew(-30deg);
+}
+
+.shape5 {
+	background-color: #2bcbba;
+	flex: 0 0 200px;
+	height: 200px;
+}
+
+.shape6 {
+	background-color: #eb3b5a;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: rotate(-45deg);
+}
+
+.shape7 {
+	background-color: #ff7f50;
+	flex: 0 0 250px;
+	height: 250px;
+}
+
+.shape8 {
+	background-color: #44bd32;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: skew(30deg);
+}
+
+.shape9 {
+	background-color: #4b7bec;
+	flex: 0 0 200px;
+	height: 200px;
+}
+
+.shape10 {
+	background-color: #a55eea;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: rotate(45deg);
+}
+
+.shape11 {
+	background-color: #fc5c65;
+	flex: 0 0 250px;
+	height: 250px;
+}
+
+.shape12 {
+	background-color: #fd9644;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: skew(-30deg);
+}
+
+.shape13 {
+	background-color: #fed330;
+	flex: 0 0 200px;
+	height: 200px;
+}
+
+.shape14 {
+	background-color: #26de81;
+	flex: 0 0 150px;
+	height: 150px;
+	transform: rotate(-45deg);
+}
+
+.shape15 {
+    background-color: #d1d8e0;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+  }
+
+.shape16 {
+    background-color: #eb3b5a;
+    flex: 0 0 250px;
+    height: 250px;
+    transform: skew(30deg);
+  }
+
+  .shape17 {
+    background-color: #ff7f50;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+  }
+
+  .shape18 {
+    background-color: #44bd32;
+    flex: 0 0 200px;
+    height: 200px;
+  }
+
+  .shape19 {
+    background-color: #4b7bec;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: skew(-30deg);
+  }
+
+  .shape20 {
+    background-color: #a55eea;
+    flex: 0 0 250px;
+    height: 250px;
+    transform: rotate(45deg);
+  }
+
+  .shape21 {
+    background-color: #fc5c65;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: skew(30deg);
+  }
+
+  .shape22 {
+    background-color: #fd9644;
+    flex: 0 0 200px;
+    height: 200px;
+  }
+
+  .shape23 {
+    background-color: #fed330;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+  }
+
+  .shape24 {
+    background-color: #26de81;
+    flex: 0 0 250px;
+    height: 250px;
+    transform: skew(-30deg);
+  }
+
+  .shape25 {
+    background-color: #2bcbba;
+    flex: 0 0 150px;
+    height: 150px;
+    transform: rotate(45deg);
+  }
