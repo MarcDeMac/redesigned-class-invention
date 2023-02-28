@@ -164,3 +164,14 @@ body {
   transform: skewY(-10deg);
   z-index: -1;
 }
+
+.park {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  height: 200px;
+  width: 200px;
+  background-color: #85C99D;
+  border-radius: 50%;
+  z-index: 0;
+}
