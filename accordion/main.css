@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.landscape {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("blue-background.jpeg");
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+
+.person {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(255, 247, 247);
+  border-radius: 20px 20px 0 0;
+  clip-path: polygon(0% 33%, 0% 100%, 100% 100%, 100% 33%, 85% 33%, 85% 10%, 80% 10%, 80% 0, 60% 0, 60% 10%, 55% 10%, 55% 33%, 40% 33%, 40% 10%, 35% 10%, 35% 0, 25% 0, 25% 10%, 20% 10%, 20% 33%);
+  animation: walk 8s linear infinite;
+  animation-delay: 1s;
+}
+
+/* Keyframes for person walking animation */
+@keyframes walk {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  75% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.tree {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green;
+  animation: grow-tree 2s ease-out forwards, sway-tree 5s ease-in-out infinite alternate, move-tree 20s linear infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes move-tree {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes grow-tree {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 100px;
+    height: 200px;
+  }
+}
+
+@keyframes sway-tree {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+.tree1 {
+  left: 100px;
+}
+
+.tree2 {
+  right: 100px;
+}
+
+.mountain {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid gray;
+  animation: move-mountain 20s linear infinite, float-mountain 5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes move-mountain {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes float-mountain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.river {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  animation: flow-river 5s linear infinite alternate;
+  background: linear-gradient(to right, blue, lightblue);
+}
+
+@keyframes flow-river {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.house {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  animation: move-house 10s linear infinite alternate;
+}
+
+.house:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background: rgb(238, 208, 208);
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+}
+
+.house:after {
+  content: "";
+  position: absolute;
+  bottom: -20;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: white;
+  transform: skew(-20deg);
+}
+
+@keyframes move-house {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.expand-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  margin-right: 10px;
+  position: relative;
+  animation: glow 2s infinite;
+}
+
+.arrow:last-child {
+  margin-right: 0;
+}
+
+.arrow:before {
+  content: '';
+  display: block;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 16px 16px 0 16px;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  animation: glow 1s ease-in-out infinite;
+}
+
+.expand-button:hover .arrow:before {
+  animation: none;
+}
+
+/* Keyframes for person walking animation */
+@keyframes walk {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Keyframes for arrow glowing animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); }
+}
+
+/* Styles for expanding the landscape */
+.landscape.expand {
+  height: auto;
+  padding-bottom: 20vh;
+  transition: all 1s ease-in-out;
+}
+
+.landscape.expand .person {
+  animation: none;
+}
+
+.landscape.expand .tree {
+  position: static;
+  margin-bottom: 10vh;
+}
+
+.landscape.expand .mountain {
+  position: static;
+  margin-bottom: 10vh;
+}
+
+.landscape.expand .house {
+  position: static;
+  margin-bottom: 10vh;
+}
+
+.landscape.expand .river {
+  position: static;
+  height: 30vh;
+  margin-bottom: 10vh;
+}
+
+/* Styles for arrow bouncing animation */
+.expand-button:hover .arrow {
+  animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
