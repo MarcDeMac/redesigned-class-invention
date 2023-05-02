@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Shapes Animation</title>
+    <style>
+      body {
+        background-color: #252525;
+        overflow: hidden;
+      }
+      
+      .shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      
+      .circle {
+        width: 50px;
+        height: 50px;
+        background-color: #ffb900;
+        box-shadow: 0 0 10px #ffb900;
+        animation-name: move-circle;
+      }
+      
+      .square {
+        width: 50px;
+        height: 50px;
+        background-color: #f44336;
+        box-shadow: 0 0 10px #f44336;
+        animation-name: move-square;
+      }
+      
+      .triangle {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid #4caf50;
+        box-shadow: 0 0 10px #4caf50;
+        animation-name: move-triangle;
+      }
+      
+      .heart {
+        width: 50px;
+        height: 50px;
+        background-color: #e91e63;
+        box-shadow: 0 0 10px #e91e63;
+        animation-name: move-heart;
+      }
+      
+      .star {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #9c27b0;
+        box-shadow: 0 0 10px #9c27b0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: rotate-star;
+      }
+      
+      .diamond {
+        width: 0;
+        height: 0;
+        border: 25px solid #3f51b5;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        box-shadow: 0 0 10px #3f51b5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: rotate-diamond;
+      }
+      
+      @keyframes move-circle {
+        0% {
+          transform: translate(-100px, -100px) rotate(0deg);
+        }
+        25% {
+          transform: translate(50px, 50px) rotate(90deg);
+        }
+        50% {
+          transform: translate(200px, 100px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-50px, 200px) rotate(270deg);
+        }
+        100% {
+          transform: translate(-100px, -100px) rotate(360deg);
+        }
+      }
+      
+      @keyframes move-square {
+        0% {
+          transform: translate(100px, 100px) rotate(0deg);
+        }
+        25% {
+          transform: translate(-50px, 50px) rotate(90deg);
+        }
+        50% {
+          transform: translate(-200px, -100px) rotate(180deg);
+        }
+        
+        75% {
+          transform: translate(50px, -200px) rotate(270deg);
+        }
+        100% {
+          transform: translate(100px, 100px) rotate(360deg);
+        }
+      }
+      
+      @keyframes move-triangle {
+        0% {
+          transform: translate(50px, -100px) rotate(0deg);
+        }
+        25% {
+          transform: translate(-50px, 50px) rotate(90deg);
+        }
+        50% {
+          transform: translate(200px, -50px) rotate(180deg);
+        }
+        75% {
+          transform: translate(-50px, -200px) rotate(270deg);
+        }
+        100% {
+          transform: translate(50px, -100px) rotate(360deg);
+        }
+      }
+      
+      @keyframes move-heart {
+        0% {
+          transform: translate(-200px, 100px) rotate(0deg) scale(1);
+        }
+        25% {
+          transform: translate(100px, -50px) rotate(90deg) scale(1.5);
+        }
+        50% {
+          transform: translate(-50px, -100px) rotate(180deg) scale(2);
+        }
+        75% {
+          transform: translate(100px, 50px) rotate(270deg) scale(1.5);
+        }
+        100% {
+          transform: translate(-200px, 100px) rotate(360deg) scale(1);
+        }
+      }
+      
+      @keyframes rotate-star {
+        0% {
+          transform: translate(-200px, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(0, 200px) rotate(90deg);
+        }
+        50% {
+          transform: translate(200px, 0) rotate(180deg);
+        }
+        75% {
+          transform: translate(0, -200px) rotate(270deg);
+        }
+        100% {
+          transform: translate(-200px, 0) rotate(360deg);
+        }
+      }
+      
+      @keyframes rotate-diamond {
+        0% {
+          transform: translate(200px, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(0, -200px) rotate(90deg);
+        }
+        50% {
+          transform: translate(-200px, 0) rotate(180deg);
+        }
+        75% {
+          transform: translate(0, 200px) rotate(270deg);
+        }
+        100% {
+          transform: translate(200px, 0) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shape circle"></div>
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+    <div class="shape heart"></div>
+    <div class="shape star"></div>
+    <div class="shape diamond"></div>
+  </body>
+</html>

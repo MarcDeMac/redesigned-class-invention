@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer Idle Screen</title>
+  <style>
+
+.spinning-image {
+  position: fixed;
+  top: 50;
+  right: 0;
+  max-width: 20%;
+  max-height: 50;
+  height: 30px;
+  width: 20px;
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+    /* Center the content and set the background color */
+    body {
+      background-color: #020815;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+	
+	
+	.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: -1;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+    
+    /* Style for the abstract shapes */
+    .shape {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      opacity: 0.7;
+      filter: blur(5px);
+      box-shadow: 0 0 20px 10px #00C3FF, 0 0 50px 20px #FDB813;
+      animation: move 10s infinite;
+    }
+    
+    /* Animation for the abstract shapes */
+    @keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50vw, 25vh);
+  }
+  50% {
+    transform: translate(100vw, 0);
+  }
+  75% {
+    transform: translate(50vw, -25vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+    
+    /* Style for the button */
+    .button {
+      padding: 10px 10px;
+      background-color: #FDB813;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 30px;
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 0 10px 5px #FDB813;
+    }
+    
+   /* Style for the images */
+   .popup-image {
+      position: fixed;
+      top: 10%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+	/* Animate the images */
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-40px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* Apply the animation to the images */
+img {
+    animation: float 5s ease-in-out infinite;
+}
+
+    
+	
+  </style>
+</head>
+<body>
+	<div class="spinning-image">
+		<img src="Biscuit-3.png" alt="Spinning Image">
+	  </div>
+	<div class="background">
+		<div class="image-container">
+		  <img src="Satelite_1.png" alt="Image 1">
+		</div>
+		<div class="image-container">
+		  <img src="image2.jpg" alt="">
+		</div>
+		<div class="image-container">
+		  <img src="image3.jpg" alt="">
+		</div>
+
+  <!-- Abstract shapes -->
+  <div class="shape" style="background-color: white; top: 20%; left: 1-0%;"></div>
+  <div class="shape" style="background-color: white; top: -0%; left: 50%;"></div>
+  <div class="shape" style="background-color: white; top: 80%; left: -80%;"></div>
+  <div class="shape" style="background-color: white; top: 20%; left: 10%;"></div>
+  <div class="shape" style="background-color: white; top: -60%; left: 50%;"></div>
+  <div class="shape" style="background-color: #FDB813; top: -80%; left: -80%;"></div>
+  <div class="shape" style="background-color: #FF5454; top: -30%; left: 80%;"></div>
+  <div class="shape" style="background-color: #AD00FF; top: 50%; left: 20%;"></div>
+  <div class="shape" style="background-color: #F0F6A9; top: 70%; left: -40%;"></div>
+  <div class="shape" style="background-color: #4f3148; top: 70%; left: 0%;"></div>
+  <div class="shape" style="background-color: #707aa9; top: -70%; left: 8%;"></div>
+  <div class="shape" style="background-color: #00C3FF; top: -9%; left: 80%;"></div>
+  <div class="shape" style="background-color: #2f2c26; top: 42%; left: -64%;"></div>
+  <div class="shape" style="background-color: #FDB813; top: 35%; left: 82%;"></div>
+  <div class="shape" style="background-color: #00C3FF; top: -44%; left: 77%;"></div>
+  <div class="shape" style="background-color: #FDB813; top: -24%; left: -59%;"></div>
+  <div class="shape" style="background-color: #71da8d; top: -08%; left: 88%;"></div>
+  <div class="shape" style="background-color: #AD00FF; top: 74%; left: 11%;"></div>
+  <div class="shape" style="background-color: #F0F6A9; top: 46%; left: -87%;"></div>
+  <div class="shape" style="background-color: #d3b4cc; top: 63%; left: 0%;"></div>
+  <div class="shape" style="background-color: #aea490; top: 75%; left: -90%;"></div>
+  <div class="shape" style="background-color: #d0c9b8; top: -35%; left:82%;"></div>
+  <div class="shape" style="background-color: #b1c0c5; top: -44%; left: 77%;"></div>
+  <div class="shape" style="background-color: #e1d9c7; top: -24%; left: -59%;"></div>
+  <div class="shape" style="background-color: #b5cfbc; top: -08%; left: 88%;"></div>
+  <div class="shape" style="background-color: #b2a4b8; top: 62%; left: 74%;"></div>
+  <div class="shape" style="background-color: #c8cab5; top:04%; left: -66%;"></div>
+  <div class="shape" style="background-color: #d0c4cd; top: 25%; left: 0%;"></div>
+  <!-- Buttons to pop up images and play music -->
+  <button class="button" onclick="showImage('https://picsum.photos/800/600')">Link #1</button>
+  <button class="button" onclick="showImage('https://picsum.photos/800/600?grayscale')">Link #2</button>
+  <button class="button" onclick="playMusic()">Radio</button>
+  <button class="button" onclick="showImage('https://picsum.photos/800/600?random=1')">Link #3</button>
+  <button class="button" onclick="showImage('https://picsum.photos/800/600?random=2')">Link #4</button>
+  
+  <!-- JavaScript functions to handle the button clicks -->
+  <script>
+
+    function showImage(imageSrc) {
+      var popup = document.createElement('img');
+      popup.setAttribute('src', imageSrc);
+      popup.setAttribute('class', 'popup-image');
+      document.body.appendChild(popup);
+      
+      // Add a button to close the popup image
+      var closeButton = document.createElement('button');
+      closeButton.setAttribute('class', 'button');
+      closeButton.style.position = 'fixed';
+      closeButton.style.top = '20px';
+      closeButton.style.right = '20px';
+      closeButton.style.zIndex = '9999';
+      closeButton.textContent = 'Close';
+      closeButton.onclick = function() {
+        document.body.removeChild(popup);
+        document.body
+		.removeEventListener('click', closeOnClick);
+document.body.removeChild(closeButton);
+};
+
+// Add a function to close the popup image when clicking outside of it
+var closeOnClick = function(event) {
+    if (event.target == popup) {
+      document.body.removeChild(popup);
+      document.body.removeEventListener('click', closeOnClick);
+      document.body.removeChild(closeButton);
+    }
+  };
+  document.body.appendChild(closeButton);
+  document.body.addEventListener('click', closeOnClick);
+}
+
+function playMusic() {
+  var audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+  audio.play();
+}
+
+
+</script>
+</body>
+</html>

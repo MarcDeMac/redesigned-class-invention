@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+.active {
+    padding: 20px;
+    background-color: slategray;
+    color: white;
+    font-size: 20px;
+  }
